@@ -18,10 +18,21 @@
         overflow: hidden; /* para esconder o conteúdo que ultrapassa os limites do card */
     }
 
+    .flexcontainer
+    {
+        background: linear-gradient(to bottom, #3A0F4B, #220D26); /* gradiente de fundo */
+        border: 2px solid #3A0F4B; /* borda amarela */
+        height: 630px; /* altura do card */
+        margin: 25px; /* margem ao redor do card */
+        padding: 10px; /* espaçamento interno */
+        border-radius: 15px; /* bordas arredondadas */
+        overflow: hidden; /* para esconder o conteúdo que ultrapassa os limites do card */
+    }
+
     .header-title
     {
         text-align: center; /* centraliza o texto */
-        font-size: 35px; /* tamanho da fonte */
+        font-size: 45px; /* tamanho da fonte */
         color: #FFCE23; /* cor do texto */
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* fonte do texto */
         margin-top: 15px; /* margem superior */
@@ -32,20 +43,26 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* fonte do texto */
         font-weight: 500; /* peso da fonte */
         color: #FFFFFF; /* cor do texto */
-        font-size: 15px; /* tamanho da fonte */
+        font-size: 18px; /* tamanho da fonte */
         text-align: center; /* centraliza o texto */
-        margin-top: 20px; /* margem superior */
+        margin: 25px; /* margem direita */
     }
 
     .enter-the-date
     {
-        color:#FFFFFF
-        
+        color:#FFFFFF; /* cor do texto */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* fonte do texto */
+        font-weight: 500; /* peso da fonte */
+        font-size: 15px; /* tamanho da fonte */
+        text-align: center; /* centraliza o texto */
+        font-size: 35px;
+        margin-bottom: 15px; /* margem inferior */
     }
 
     .sports, .simulation, .strategy
     {
         color: #FFFFFF;
+        margin-top: 20px;
 
     }
 
@@ -72,25 +89,28 @@
                 <br>No final da enquete iremos sortear um brinde entre os participantes.<br>
             </div>
 
+            <div class = "flexcontainer">
+
                     <div class = "enter-the-date">
                         <br>Digite os seus dados e escolha entre os três finalistas!
-                    
-                        <div class = "sports">
-                            Esportes
-                        </div>
+                    </div>
 
+                            <div class = "sports">
+                            Esportes
+                            </div>
+                    
                             <div class = "simulation">
                                 Simulação
                             </div>
 
-                                <div class = "strategy">
+                            <div class = "strategy">
                                     Estratégia
-                                </div>
+                                </div>  
 
                                         <div class = "developed">
                                             <br>Desenvolvido por William Estevam
                                         </div>
-                    </div>
+            </div>        
         </div>
 </body>
 </html>
