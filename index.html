@@ -59,6 +59,24 @@
         margin-bottom: 15px; /* margem inferior */
     }
 
+    .form-container
+    {
+        text-align: center;
+    }
+
+    input[type="text"],
+    input[type="email"]
+    {
+        width: 68%; /* largura total */
+        padding: 8px; /* espaçamento interno */
+        margin: 10px 0; /* margem vertical */
+        border: 1px solid #ccc; /* borda cinza clara */
+        border-radius: 5px; /* bordas arredondadas */
+        font-size: 16px; /* tamanho da fonte */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* fonte do texto */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* sombra suave */
+    }
+
     .sports, .simulation, .strategy
     {
         color: #FFFFFF;
@@ -91,19 +109,24 @@
 
             <div class = "flexcontainer">
 
-                    <div class = "enter-the-date">
-                        <br>Digite os seus dados e escolha entre os três finalistas!
+                <div class = "enter-the-date">
+                    <br>Digite os seus dados e escolha entre os três finalistas!
+                </div>
+
+                    <div class = "form-container">
+                        <input type = "text" placeholder = "Digite o seu nome:"/>
+                        <input type = "email" placeholder = "Digite o seu e-mail:"/>
                     </div>
 
-                            <div class = "sports">
+                        <div class = "sports">
                             Esportes
-                            </div>
+                        </div>
                     
                             <div class = "simulation">
                                 Simulação
                             </div>
 
-                            <div class = "strategy">
+                                <div class = "strategy">
                                     Estratégia
                                 </div>  
 
