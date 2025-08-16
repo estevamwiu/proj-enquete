@@ -1,156 +1,221 @@
 body
 {
     background-color: #000000; /* cor de fundo */
+    margin: 0;
 }
 
 .container 
 {
-    max-width: 600px; /* largura total do card */
+    max-width: clamp(320px, 92vw, 600px); /* largura máxima do card */
+    width: 100%; /* largura total do card */
     display: flex; /* exibe como um flex container */
-        flex-direction: column; /* direção das colunas */
-        justify-content: space-between; /* espaço entre os elementos */
-        background: linear-gradient(to bottom, #220D26, #631E6F); /* gradiente de fundo */
-        margin: 0 auto; /* margem ao redor do card */
-        border-radius: 10px; /* bordas arredondadas */
-        padding: 20px; /* espaçamento interno */
-        height: 640px; /* altura total do card */
-    }
-
-    .flexcontainer
-    {
-        background: linear-gradient(to bottom, #631E6F, #220D26); /* gradiente de fundo */
-        border: 2px solid #3A0F4B; /* borda amarela */
-        margin: 5px; /* margem ao redor do card */
-        border-radius: 10px; /* bordas arredondadas */
-        overflow: hidden; /* para esconder o conteúdo que ultrapassa os limites do card */
-        min-height: 400px; /* altura mínima */
-        padding-bottom: 5px; /* espaço interno embaixo */
+    flex-direction: column; /* direção das colunas */
+    gap: clamp(10px, 2.5vw, 16px); /* espaço entre os elementos */
+    background: linear-gradient(to bottom, #220D26, #631E6F); /* gradiente de fundo */
+    margin: 0 auto; /* margem ao redor do card */
+    margin-top: clamp(2px, 6vh, 80px); /* margem superior */   
+    border-radius: 5px; /* bordas arredondadas */
+    padding: clamp(12px, 3vw, 24px); /* espaçamento interno */
+    padding-bottom: clamp(2px, 1.2vw, 6px);
 }
 
-    .header-title
+.flexcontainer
+{
+    background: linear-gradient(to bottom, #631E6F, #220D26); /* gradiente de fundo */
+    border: 2px solid #3A0F4B; /* borda amarela */
+    border-radius: 10px; /* bordas arredondadas */
+    overflow: hidden; /* para esconder o conteúdo que ultrapassa os limites do card */
+    min-height: clamp(220px, 45vh, 480px); /* altura mínima */
+    padding: clamp(10px, 2.5vw, 14px); /* espaço interno embaixo */
+    padding-top: clamp(1px, 1.2vw, 2px); /* espaço interno em cima */
+}
+
+.header-title
+{
+    text-align: center; /* centraliza o texto */
+    font-size: clamp(22px, 4.5vw, 35px); /* tamanho da fonte */
+    color: #FFCE23; /* cor do texto */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* fonte do texto */
+    margin: 4px 0; /* margem superior */
+}
+
+.description
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* fonte do texto */
+    font-weight: 500; /* peso da fonte */
+    color: #FFFFFF; /* cor do texto */
+    font-size: clamp(13px, 2.5vw, 14px); /* tamanho da fonte */
+    text-align: center; /* centraliza o texto */
+    margin: 0 clamp(8px, 2.5vw, 15px); /* margem */
+}
+
+.enter-the-date
+{
+    color:#FFFFFF; /* cor do texto */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* fonte do texto */
+    font-weight: 500; /* peso da fonte */
+    text-align: center; /* centraliza o texto */
+    font-size: clamp(16px, 3.5vw, 20px); /* tamanho da fonte */
+    margin: 1px 0 20px; /* margem inferior */
+}
+
+.form-container
+{
+    text-align: center; /* centraliza o texto */
+    margin-bottom: clamp(12px, 4vw, 24px); /* margem inferior */
+}
+
+    input[type="text"], /* campo de texto */
+    input[type="email"] /* campo de e-mail */
+{
+    width: 100%; /* largura total */
+    max-width: 400px; /* largura máxima */
+    padding: clamp(8px, 2.5vw, 5px); /* espaçamento interno */
+    margin: 10px auto; /* margem vertical */
+    border: 1px solid #ccc; /* borda cinza clara */
+    border-radius: 5px; /* bordas arredondadas */
+    font-size: clamp(13px, 2.6vw, 14px); /* tamanho da fonte */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* fonte do texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* sombra suave */
+    outline: none; /* remove o contorno padrão */
+    box-sizing: border-box; /* inclui padding e border na largura total */
+}
+
+.cards-wrapper 
+{
+    display: grid; /* exibe como um grid */
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* define as colunas do grid */
+    gap: clamp(12px, 5vw, 45px); /* espaço entre os elementos */
+}
+
+.container-two
+{
+    background: linear-gradient(to bottom, #3E5FEF, #322A8E); /* gradiente de fundo */
+    border-radius: 7px; /* bordas arredondadas */
+    padding: clamp(12px, 3vw, 16px); /* espaçamento interno */
+    display: flex; /* exibe como um flex container */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente */
+}
+
+.font
+{
+    color: #FFFFFF; /* cor do texto */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* fonte do texto */
+    font-weight: 500; /* peso da fonte */
+    font-size: clamp(16px, 4vw, 20px); /* tamanho da fonte */
+    text-align: center; /* centraliza o texto */
+    padding-top: clamp(12px, 3vw, 20px); /* margem superior */
+}
+
+.container-card
+{
+    width: 100%; /* largura total do card */
+    max-width: clamp(110px, 20vw, 130px); /* largura máxima */
+    aspect-ratio: 137 / 197; /* proporção do card */
+    margin: 7px auto 0; /* margem superior */
+    background: linear-gradient(to bottom, #2637DA, #5793F6); /* gradiente de fundo */
+}
+
+.button
+{
+    background: #1D0C20; /* cor de fundo */
+    color: white; /* cor do texto */
+    padding: clamp(8px, 2.5vw, 4px) clamp(10px, 3vw, 14px); /* espaçamento interno */
+    width: min(100%, 50px); /* largura máxima do botão */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* fonte do texto */
+    font-weight: 490; /* peso da fonte */
+    text-decoration: none; /* remove o sublinhado */
+    font-size: clamp(13px, 2.8vw, 14px); /* tamanho da fonte */
+    margin: 6px auto 0; /* margem */
+    cursor: pointer; /* cursor pointer */
+}
+
+.button:hover
+{
+    background: #3A0F4B; /* cor de fundo ao passar o mouse */
+    color: #FFCE23; /* cor do texto ao passar o mouse */
+    transition: background-color 0.3s ease; /* transição suave */
+}
+
+.image-group object
+{
+    display: block; /* exibe como um bloco */
+    width: clamp(56px, 12vw, 85px); /* largura do objeto */
+    height: auto; /* altura automática */
+    margin: 6px auto 0; /* margem */
+}
+
+.developed
+{
+    color: #FFFFFF; /* cor do texto */
+    text-align: center; /* centraliza o texto */
+    font-size: 12px; /* tamanho da fonte */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* fonte do texto */
+    font-weight: 498; /* peso da fonte */
+    margin-top: -8px; /* margem superior */
+}
+
+@media (max-width: 620px)
+{
+    .container 
     {
-        text-align: center; /* centraliza o texto */
-        font-size: 35px; /* tamanho da fonte */
-        color: #FFCE23; /* cor do texto */
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* fonte do texto */
-        margin-top: 5px; /* margem superior */
+        max-width: 85%; /* largura total do card em telas pequenas */
+        padding: 15px; /* espaçamento interno reduzido */
     }
 
-    .description
+    .header-title 
     {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* fonte do texto */
-        font-weight: 500; /* peso da fonte */
-        color: #FFFFFF; /* cor do texto */
-        font-size: 14px; /* tamanho da fonte */
-        text-align: center; /* centraliza o texto */
-        margin-left: 15px; /* margem esquerda */
-        margin-right: 15px; /* margem direita */
+        font-size: 26px; /* tamanho da fonte reduzido */
+    }
+
+    .description 
+    {
+        font-size: 11px; /* tamanho da fonte reduzido */
     }
 
     .enter-the-date
     {
-        color:#FFFFFF; /* cor do texto */
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* fonte do texto */
-        font-weight: 500; /* peso da fonte */
-        text-align: center; /* centraliza o texto */
-        font-size: 20px; /* tamanho da fonte */
-        margin-bottom: 15px; /* margem inferior */
+        font-size: 14px; /* tamanho da fonte reduzido */
     }
 
-    .form-container
+    .button 
     {
-        text-align: center; /* centraliza o texto */
-    }
-
-    input[type="text"], /* campo de texto */
-    input[type="email"] /* campo de e-mail */
-    {
-        width: 400px; /* largura total */
-        padding: 6px; /* espaçamento interno */
-        margin: 10px; /* margem vertical */
-        border: 1px solid #ccc; /* borda cinza clara */
-        border-radius: 5px; /* bordas arredondadas */
-        font-size: 14px; /* tamanho da fonte */
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* fonte do texto */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* sombra suave */
-        outline: none; /* remove o contorno padrão */
-    }
-
-    .cards-wrapper 
-    {
-        display: flex; /* exibe como um flex container */
-        justify-content: space-between; /* ou space-between */
-        align-self: start; /* alinhamento ao início */
-        flex-wrap: wrap; /* para quebrar em telas menores */
-    }
-
-    .container-two
-    {
-        width: 155px; /* largura total do card */
-        margin-left: 20px; /* margem esquerda */
-        margin-right: 20px; /* margem direita */
-        padding-bottom: 10px; /* espaçamento interno inferior */
-        background: linear-gradient(to bottom, #3E5FEF, #322A8E); /* gradiente de fundo */
-        border-radius: 7px; /* bordas arredondadas */
-        margin-top: 17px; /* margem superior */
-        display: flex; /* exibe como um flex container */
-        justify-content: center; /* centraliza o conteúdo horizontalmente */
-        align-items: center; /* centraliza o conteúdo verticalmente */
-    }
-
-    .font
-    {
-        color: #FFFFFF; /* cor do texto */
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* fonte do texto */
-        font-weight: 500; /* peso da fonte */
-        font-size: 20px; /* tamanho da fonte */
-        text-align: center; /* centraliza o texto */
-        padding-top: 20px; /* margem superior */
+        width: min(50%, 180px); /* largura máxima do botão */
+        font-size: 12px; /* tamanho da fonte reduzido */
+        padding: 6px 12px; /* espaçamento interno reduzido */
     }
 
     .container-card
     {
-        width: 137px; /* largura total do card */
-        height: 197px; /* altura total do card */
-        margin-top: 7px; /* margem superior */
-        background: linear-gradient(to bottom, #2637DA, #5793F6); /* gradiente de fundo */
-    }
-
-    .button
-    {
-        background: #1D0C20; /* cor de fundo */
-        border: none; /* remove a borda */
-        color: white; /* cor do texto */
-        padding: 8px 20px; /* espaçamento interno */
-        text-align: center; /* centraliza o texto */
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* fonte do texto */
-        font-weight: 490; /* peso da fonte */
-        text-decoration: none; /* remove o sublinhado */
-        display: inline-block; /* exibe como um bloco em linha */
-        font-size: 14px; /* tamanho da fonte */
-        margin: 2px 1px; /* margem */
-        cursor: pointer; /* cursor pointer */
-    }
-
-    .button:hover
-    {
-        background: #3A0F4B; /* cor de fundo ao passar o mouse */
-        color: #FFCE23; /* cor do texto ao passar o mouse */
-        transition: background-color 0.3s ease; /* transição suave */
-    }
-
-    .image-group object
-    {
-        width: 85px; /* largura da imagem */
-        height: 100px; /* altura da imagem */
+        max-width: 85%; /* largura total do card em telas pequenas */
+        padding: 15px; /* espaçamento interno reduzido */
     }
 
     .developed
     {
-        color: #FFFFFF; /* cor do texto */
-        text-align: center; /* centraliza o texto */
-        font-size: 12px; /* tamanho da fonte */
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* fonte do texto */
-        font-weight: 498; /* peso da fonte */
+        font-size: 10px; /* tamanho da fonte reduzido */
+    }
+
+    .font
+    {
+        font-size: 14px; /* tamanho da fonte reduzido */
+
+    }
+
+    .cards-wrapper
+    {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        justify-items: center; /* centraliza os itens */
+        gap: 15px; /* espaçamento entre os itens */
+    }
+
+    input[type="text"],
+    input[type="email"]
+    {
+       width: 100%; /* largura total */
+       box-sizing: border-box; /* inclui padding e border na largura total */
+       font-size: 11px; /* tamanho da fonte reduzido */
+       padding: clamp(7px, 2.5vw, 5px); /* espaçamento interno */
     }
 }
